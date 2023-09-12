@@ -2,11 +2,14 @@
 import { useInView, motion } from 'framer-motion'
 import React, { useEffect, useRef } from 'react'
 
-interface MaskTextProps {
-  phrases: Record<string, any>
-}
+const phrases = [
+  'Hello There',
+  'My Name Is',
+  'Hrishik Shaji',
+  "I'm A Web Developer"
+]
 
-export const MaskText: React.FC<MaskTextProps> = ({ phrases }) => {
+export const MaskText = () => {
   const body = useRef(null)
   const isInView = useInView(body, { once: true, margin: '-10%' })
 
@@ -18,8 +21,8 @@ export const MaskText: React.FC<MaskTextProps> = ({ phrases }) => {
     initial: { y: '100%' },
     open: (i) => ({
       y: '0%',
-      transition: { duration: 0.5, delay: 0.1 * i, ease: [0.33, 1, 0.68, 1] },
-    }),
+      transition: { duration: 0.5, delay: 0.1 * i, ease: [0.33, 1, 0.68, 1] }
+    })
   }
 
   return (
