@@ -1,13 +1,10 @@
 'use client'
 
 import { ImageGalleryTrailer } from '@/components/ImageGalleryTrailer'
+import { PixelCursor } from '@/components/PixelCursor'
 
 const Home = () => {
-  return (
-    <main className='bg-white text-black flex flex-col items-center gap-20 mt-20'>
-      <ImageGalleryTrailer />
-    </main>
-  )
+  return <main className=''></main>
 }
 
 export default Home
