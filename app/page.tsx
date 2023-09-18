@@ -1,11 +1,11 @@
 'use client'
 
-import { MouseScaleGallery } from '@/components/MouseScaleGallery'
+import { FloatingImageGallery } from '@/components/FloatingImageGallery'
 
 export default function Home() {
   return (
     <main className=''>
-      <MouseScaleGallery />
+      <FloatingImageGallery />
     </main>
   )
-
+}
