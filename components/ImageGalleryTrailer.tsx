@@ -9,7 +9,7 @@ export const ImageGalleryTrailer = () => {
   let maxImages = 8
   let noOfImages = 0
 
-  const manageMouseMove = (e) => {
+  const manageMouseMove = (e: any) => {
     const { clientX, clientY, movementX, movementY } = e
     step += Math.abs(movementX) + Math.abs(movementY)
 
@@ -26,7 +26,11 @@ export const ImageGalleryTrailer = () => {
     }
   }
 
-  const mouseMove = (x, y) => {
+  let user: number = 'world'
+
+  let userrr = 'www'
+
+  const mouseMove = (x: number, y: number) => {
     console.log(x, y, collection)
     const targetImage = collection[currentIndex].current
     targetImage.style.display = 'block'

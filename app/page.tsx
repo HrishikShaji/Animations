@@ -2,12 +2,10 @@
 
 import { MouseScaleGallery } from '@/components/MouseScaleGallery'
 
-const Home = () => {
+export default function Home() {
   return (
     <main className=''>
       <MouseScaleGallery />
     </main>
   )
-}
 
-export default Home
