@@ -20,6 +20,7 @@ export const FloatingImageGallery = () => {
   const speed = 0.01
   let xForce = 0
   let yForce = 0
+  let easing = 0.08
   let requestAnimationFramId = null
 
   const manageMouseMove = (e) => {
@@ -35,6 +36,8 @@ export const FloatingImageGallery = () => {
   const lerp = (start, end, amount) => start * (1 - amount) + end * amount
 
   const animate = () => {
+    xForce = lerp(xForce, 0, easing)
+    yForce = lerp(yForce, 0, easing)
     gsap.set(plane1.current, {
       x: `+=${xForce}`,
       y: `+=${yForce}`
@@ -48,7 +51,16 @@ export const FloatingImageGallery = () => {
       x: `+=${xForce * 0.25}`,
       y: `+=${yForce * 0.25}`
     })
-    requestAnimationFrame(animate)
+
+    if (Math.abs(xForce) < 0.01) xForce = 0
+    if (Math.abs(yForce) < 0.01) yForce = 0
+
+    if (xForce > 0 || yForce > 0) {
+      requestAnimationFrame(animate)
+    } else {
+      cancelAnimationFrame(requestAnimationFramId)
+      requestAnimationFramId = null
+    }
   }
   return (
     <div
