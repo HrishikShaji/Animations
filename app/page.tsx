@@ -1,11 +1,12 @@
 'use client'
 
-import { FloatingImageGallery } from '@/components/FloatingImageGallery'
+import { ScrollTriggerDemo } from '@/components/ScrollTriggerDemo'
 
 export default function Home() {
   return (
     <main className=''>
-      <FloatingImageGallery />
+      <section className='h-screen w-full '></section>
+      <section className='h-screen w-full '></section>
     </main>
   )
 }
