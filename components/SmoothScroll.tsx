@@ -1,6 +1,7 @@
 'use client'
 
 import Lenis from '@studio-freight/lenis'
+import { warn } from 'console'
 import { useEffect } from 'react'
 
 export default function SmoothScroll({
@@ -9,8 +10,6 @@ export default function SmoothScroll({
   children: React.ReactNode
 }) {
   useEffect(() => {
-    window.scrollTo(0, 10)
-
     const lenis = new Lenis({
       duration: 5
     })
@@ -23,5 +22,5 @@ export default function SmoothScroll({
     requestAnimationFrame(raf)
   }, [])
 
-  return children
+  return <>{children}</>
 }

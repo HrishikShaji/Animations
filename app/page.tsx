@@ -1,12 +1,11 @@
 'use client'
 
-import { ScrollTriggerDemo } from '@/components/ScrollTriggerDemo'
+import { GsapDemo } from '@/components/GsapDemo'
 
 export default function Home() {
   return (
     <main className=''>
-      <section className='h-screen w-full '></section>
-      <section className='h-screen w-full '></section>
+      <GsapDemo />
     </main>
   )
 }
