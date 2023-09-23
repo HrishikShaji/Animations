@@ -1,11 +1,11 @@
 'use client'
 
-import { GsapDemoTwo } from '@/components/GsapDemoTwo'
+import { GsapGallery } from '@/components/GsapGallery'
 
 export default function Home() {
   return (
     <main className=''>
-      <GsapDemoTwo />
+      <GsapGallery />
     </main>
   )
 }

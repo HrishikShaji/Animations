@@ -47,13 +47,18 @@ export const GsapDemoTwo = () => {
   const manageMouseEnter = (id: number) => {
     const title = document.getElementById(`k_${id}`)
     const dot = document.getElementById(`j_${id}`)
-    gsap.to(title, { x: 10 })
+    gsap.to(title, {
+      x: 10,
+      scale: 2,
+      transformOrigin: 'center left',
+      ease: 'expo'
+    })
     gsap.to(dot, { scale: 2 })
   }
   const manageMouseLeave = (id: number) => {
     const title = document.getElementById(`k_${id}`)
     const dot = document.getElementById(`j_${id}`)
-    gsap.to(title, { x: 0 })
+    gsap.to(title, { x: 0, scale: 1 })
     gsap.to(dot, { scale: 1 })
   }
   return (
@@ -93,7 +98,7 @@ export const GsapDemoTwo = () => {
             onMouseEnter={() => manageMouseEnter(i)}
             onMouseLeave={() => manageMouseLeave(i)}
           >
-            <div id={`j_${i}`} className='h-2 w-2 rounded-full bg-teal-500' />
+            <div id={`j_${i}`} className='h-3 w-3 rounded-full bg-teal-500' />
             <h3 id={`k_${i}`} className='font-semibold text-xl'>
               {item.name}
             </h3>
