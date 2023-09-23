@@ -8,6 +8,7 @@ export default function Home() {
     <main className=''>
       <GsapGallery />
       <HorizontalScroll />
+      <section className='h-screen w-full bg-teal-500'></section>
     </main>
   )
 }

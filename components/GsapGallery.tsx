@@ -18,7 +18,7 @@ export const GsapGallery = () => {
     })
   }, [])
   return (
-    <div>
+    <>
       <section className='h-screen w-full bg-neutral-500'></section>
       <div className='flex'>
         <div ref={leftSideRef} className='flex-1 bg-gray-500 flex flex-col'>
@@ -34,6 +34,6 @@ export const GsapGallery = () => {
         </div>
       </div>
       <section className='h-screen w-full bg-neutral-500'></section>
-    </div>
+    </>
   )
 }

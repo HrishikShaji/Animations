@@ -9,7 +9,7 @@ export const HorizontalScroll = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
 
-    const sections = gsap.utils.toArray('section')
+    const sections = gsap.utils.toArray('#container')
     let scrollTween = gsap.to(sections, {
       xPercent: -100 * (sections.length - 1),
       ease: 'none',
@@ -54,13 +54,22 @@ export const HorizontalScroll = () => {
         className='absolute top-10 z-20 left-10 w-[200px] h-1 bg-white'
       />
       <div className='flex w-[300vw]'>
-        <section className='w-screen h-screen bg-neutral-900 flex justify-center items-center'>
+        <section
+          id='container'
+          className='w-screen h-screen bg-neutral-900 flex justify-center items-center'
+        >
           <div className='bg-teal-500 w-20 h-20 rounded-md' />
         </section>
-        <section className='w-screen h-screen bg-neutral-800 flex justify-center items-center'>
+        <section
+          id='container'
+          className='w-screen h-screen bg-neutral-800 flex justify-center items-center'
+        >
           <div className='bg-teal-500 w-20 h-20 rounded-md' />
         </section>
-        <section className='w-screen h-screen bg-neutral-700 flex justify-center items-center'>
+        <section
+          id='container'
+          className='w-screen h-screen bg-neutral-700 flex justify-center items-center'
+        >
           <div className='bg-teal-500 w-20 h-20 rounded-md' />
         </section>
       </div>
