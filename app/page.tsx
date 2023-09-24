@@ -1,11 +1,11 @@
 'use client'
 
-import { LayeredPinnedSection } from '@/components/LayeredPinnedSection'
+import { CustomCursor } from '@/components/CustomCursor'
 
 export default function Home() {
   return (
     <main>
-      <LayeredPinnedSection />
+      <CustomCursor />
     </main>
   )
 }
