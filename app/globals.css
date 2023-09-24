@@ -12,3 +12,6 @@
 	transform:translateX(-50%) translateY(-50%)
 }
 
+.custom-clip {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}

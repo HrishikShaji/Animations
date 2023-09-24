@@ -1,11 +1,11 @@
 'use client'
 
-import { CustomCursor } from '@/components/CustomCursor'
+import { TextAnimation } from '@/components/TextAnimation'
 
 export default function Home() {
   return (
     <main>
-      <CustomCursor />
+      <TextAnimation />
     </main>
   )
 }
